@@ -1,20 +1,7 @@
-# Program make a simple calculator
-
-# This function adds two numbers
-def add(x, y):
-    return x + y
-
-# This function subtracts two numbers
-def subtract(x, y):
-    return x - y
-
-# This function multiplies two numbers
-def multiply(x, y):
-    return x * y
-
-#Need to define divide function.
-def divide (x,y):
-    return x / y
+from add import add
+from substract import subtract
+from multiply import multiply
+from divide import divide
 
 print("Select operation.")
 print("1.Add")
