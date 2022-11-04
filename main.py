@@ -54,9 +54,22 @@ while True:
         # check if user wants another calculation
         # break the while loop if answer is no
         next_calculation = input("Let's do next calculation? (yes/no): ")
-        if next_calculation == "no":
-            break
         
+        while next_calculation.lower() != "yes" and next_calculation.lower() != "no":
+            next_calculation = input("If you want to do next calculate, input yes. If not, input no.\nLet's do next calculation? (yes/no): ")
+            
+        if next_calculation.lower() == "no":
+            re_check = input("Are you sure? (yes/no): ")
+            
+            while re_check.lower() != "yes" and re_check.lower() != "no":
+                re_check = input("If you want to quit calculation, input yes. If not, input no\nAre you sure? (yes/no): ")
+            
+            if re_check.lower() == "yes":
+                break
+            elif re_check.lower() == "no":
+                continue
+        elif next_calculation.lower() == "yes":
+            continue
 
     else:
         logger.error("Invalid Input")
